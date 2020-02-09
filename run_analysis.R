@@ -68,14 +68,15 @@ dataSetCol <- names(meanstdSet)
 dataSetCol <- gsub("[\\(\\)-]", "", dataSetCol)
 
 #Expand abbreviations and clean up names
-dataSetCol <- gsub("^f", "frequencyDomain", dataSetCol)
-dataSetCol <- gsub("^t", "timeDomain", dataSetCol)
+dataSetCol <- gsub("^f", "frequency", dataSetCol)
+dataSetCol <- gsub("^t", "time", dataSetCol)
 dataSetCol <- gsub("Acc", "Accelerometer", dataSetCol)
 dataSetCol <- gsub("Gyro", "Gyroscope", dataSetCol)
 dataSetCol <- gsub("Mag", "Magnitude", dataSetCol)
 dataSetCol <- gsub("Freq", "Frequency", dataSetCol)
 dataSetCol <- gsub("mean", "Mean", dataSetCol)
 dataSetCol <- gsub("std", "StandardDeviation", dataSetCol)
+dataSetCol <- gsub("BodyBody", "Body", dataSetCol)
 
 #Replace the variables names with the clean names
 names(meanstdSet) <- dataSetCol
